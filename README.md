@@ -1,4 +1,4 @@
-# Academic Project Page Template
+# Project Page for NeuroPictor
 This is an project page for NeuroPictor.
 
 ## Acknowledgments
