@@ -1,5 +1,5 @@
 # Project Page for NeuroPictor
-This is an project page for NeuroPictor.
+This is source code of project page for NeuroPictor.
 
 ## Acknowledgments
 This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page</a>.
