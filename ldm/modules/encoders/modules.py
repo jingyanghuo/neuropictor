@@ -140,7 +140,8 @@ class FrozenOpenCLIPEmbedder(AbstractEncoder):
         assert layer in self.LAYERS
         print(arch, version)
         # # cache_dir = ''
-        model, _, _ = open_clip.create_model_and_transforms(arch, device=torch.device('cpu'), pretrained=version, cache_dir=cache_dir)
+        model, _, _ = open_clip.create_model_and_transforms(arch, device=torch.device('cpu'), pretrained=version)
+        
         del model.visual
         self.model = model
 
@@ -217,7 +218,7 @@ class FrozenOpenCLIP_T_V(AbstractEncoder):
         assert layer in self.LAYERS
         print(arch, version)
         # cache_dir = ''
-        model, _, _ = open_clip.create_model_and_transforms(arch, device=torch.device('cpu'), pretrained=version, cache_dir=cache_dir)
+        model, _, _ = open_clip.create_model_and_transforms(arch, device=torch.device('cpu'), pretrained=version)
         self.model = model
 
         self.device = device
@@ -338,7 +339,7 @@ class PromptOpenCLIPEmbedder(AbstractEncoder):
         assert layer in self.LAYERS
         print(arch, version)
         # cache_dir = ''
-        model, _, _ = open_clip.create_model_and_transforms(arch, device=torch.device('cpu'), pretrained=version, cache_dir=cache_dir)
+        model, _, _ = open_clip.create_model_and_transforms(arch, device=torch.device('cpu'), pretrained=version)
         del model.visual
         self.model = model
 
