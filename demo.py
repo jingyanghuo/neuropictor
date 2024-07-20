@@ -63,7 +63,6 @@ def main(opt):
     # create and load model
     model = create_model('./models/inference.yaml').cpu()
     model.model_name = out_path
-    model.load_state_dict(load_state_dict(sd21_path, location='cpu'), strict=False)
     model.sd_locked = True
     model.only_mid_control = False
 

@@ -45,16 +45,41 @@ conda activate neuropictor
 
 ## Quick Start
 
-To quickly infer using our model, we provide a [demo dataset](https://huggingface.co/Fudan-fMRI/neuropictor/blob/main/demo_data.zip) (~47 MB). Additionally, download the corresponding [checkpoint](https://huggingface.co/Fudan-fMRI/neuropictor/tree/main/ckpt/NSD/finetune_single_sub/sub01) and place it in  `./ckpt/NSD/finetune_single_sub/sub01/epoch_015.pth`. Reconstruct images by following these steps:
+1. **Download the Demo Dataset**
 
-```bash
-cd example
-unzip demo_data.zip
-cd ..
-python demo.py
-```
+   To quickly infer using our model, we provide a [demo dataset](https://huggingface.co/Fudan-fMRI/neuropictor/blob/main/demo_data.zip) (~47 MB).  Download and then unzip it:
 
-This process takes about 5 minutes to reconstruct 100 examples. The results are saved in `./example/demo_results`.
+   ```bash
+   cd example
+   unzip demo_data.zip
+   cd ..
+   ```
+
+2. **Download the Checkpoint**
+
+   Download the corresponding [checkpoint](https://huggingface.co/Fudan-fMRI/neuropictor/tree/main/ckpt/NSD/finetune_single_sub/sub01) for subject-1 and place it in the following directory:
+
+   ```bash
+   ./ckpt/NSD/finetune_single_sub/sub01/epoch_015.pth
+   ```
+
+3. **Download the Encoder**
+
+   Download the [encoder](https://huggingface.co/Fudan-fMRI/neuropictor/tree/main/ckpt/fMRI2fMRI_UKB) and place it in the following directory:
+
+   ```bash
+   ./ckpt/fMRI2fMRI_UKB
+   ```
+
+4. **Reconstruct Images**
+
+   Reconstruct images by running the following command:
+
+   ```bash
+   python demo.py
+   ```
+
+   This process takes about 5 minutes to reconstruct 100 examples. The results will be saved in `./example/demo_results`.
 
 
 ## Data Preparation
