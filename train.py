@@ -52,7 +52,7 @@ def main(opt):
     precision='bf16'
     trainer = pl.Trainer(gpus=opt.gpu_ids, precision=opt.precision, accumulate_grad_batches=opt.accum_grad,
                          default_root_dir=model.model_name,
-                         resume_from_checkpoint=opt.restore_path if opt.restore else None,
+                         resume_from_checkpoint=opt.restore_weight if opt.restore else None,
                          check_val_every_n_epoch=opt.check_val_every_n_epoch,
                          accelerator='ddp' if len(opt.gpu_ids) > 1 else None,
                          num_nodes=1,
