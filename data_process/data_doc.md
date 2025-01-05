@@ -12,11 +12,11 @@ The file `NSD_full_brain/fmri/0{i}_norm.h5` contains the full-brain fMRI data fo
 
 To extract the 256 × 256 visual cortex (VC) surface as in the paper, run: 
 ```bash
-python convert_brain.py --sub {subid} --use_vc
+python data_process/convert_brain.py --sub {subid} --use_vc
 ```
 Alternatively, to extract the full-brain fMRI surface, run: 
 ```bash
-python convert_brain.py --sub {subid}
+python data_process/convert_brain.py --sub {subid}
 ```
 
 The converted files will be saved in `.npy` format in the `NSD_full_brain/fmri_npy` folder. Note that the full-brain fMRI surface `.npy` files for all 8 subjects will occupy about 700GB of space.
