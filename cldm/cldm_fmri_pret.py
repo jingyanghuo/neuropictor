@@ -483,7 +483,7 @@ class CLDM_for_FMRI(LatentDiffusion):
         self.mask = False
         self.mask_rate = 0.0
 
-        self.sem_loss_weight = 0.0
+        self.sem_loss_weight = sem_loss_weight
         self.uniform_tensor = None
 
         self.fmri_encoder = load_fmri_encoder()

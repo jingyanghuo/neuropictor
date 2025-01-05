@@ -17,6 +17,10 @@ This is the official PyTorch implementation of the paper:
   <img src="assets/switch.jpg" alt="teaser" style="margin: 0 auto;">
 </div>
 
+## Update
+
+2025/1/5: We have made the full-brain fMRI surface data available on [Hugging Face](https://huggingface.co/Fudan-fMRI/neuropictor/tree/main/NSD_full_brain). Additionally, we have updated the repository with relevant data processing code, including instructions for handling .h5 data, full-brain ROI masks, extracting the 256 × 256 VC region from the full-brain surface, and custom ROI extraction and swapping. Please see [the steps here](data_process/data_doc.md) for more details.
+
 
 ## Abstract
 <div style="text-align: center;">
