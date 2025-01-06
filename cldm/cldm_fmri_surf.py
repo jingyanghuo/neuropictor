@@ -585,7 +585,7 @@ class CLDM_for_FMRI(LatentDiffusion):
         N = min(z.shape[0], N)
         n_row = min(z.shape[0], n_row)
         log["gtimage"] = batch[self.first_stage_key].permute(0,3,1,2)
-        log["conditioning"] = log_txt_as_img((512, 512), batch[self.cond_stage_key], size=16)
+        # log["conditioning"] = log_txt_as_img((512, 512), batch[self.cond_stage_key], size=16)
 
         if sample:
             # get denoise row
